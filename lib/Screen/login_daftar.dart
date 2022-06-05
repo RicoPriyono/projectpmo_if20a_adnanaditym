@@ -10,6 +10,6 @@ class LoginDaftar extends StatefulWidget {
 class _LoginDaftarState extends State<LoginDaftar> {
   @override
   Widget build(BuildContext context) {
-    return ();
+    return Scaffold ();
   }
 }
