@@ -13,7 +13,7 @@ class Login extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image.asset(
-              "assets/images/male.png",
+              "assets/image/user.png",
               width: 130,
               height : 150,
             ),
@@ -43,6 +43,7 @@ class Login extends StatelessWidget {
               width: 300,
               // color: Colors.white,
               child: TextFormField(
+                obscureText: true,
                 decoration: InputDecoration(
                   hintText: "Password",hintStyle: TextStyle(color: Colors.white),
                   border: UnderlineInputBorder(),
@@ -58,9 +59,13 @@ class Login extends StatelessWidget {
             SizedBox(height: 10,),
             MaterialButton(
               padding: EdgeInsets.all(20),
-              minWidth: 250,
-              color: Colors.white,
-              child: Text("Log in", style: TextStyle(color: Colors.blue, fontSize: 18, fontWeight: FontWeight.bold),),
+              minWidth: 340,
+              child: Text("Log in", style: TextStyle(color: Colors.white70, fontSize: 18, fontWeight: FontWeight.bold),),
+              color: Colors.white12,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30)
+              ),
+              
               onPressed: () {
 
               },
