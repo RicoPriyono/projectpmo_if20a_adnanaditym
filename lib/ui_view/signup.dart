@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:projectpmo_if20a_adnanaditym/ui_view/login.dart';
 
 
@@ -6,6 +7,11 @@ void main() => runApp(SignUp());
 
 
 class SignUp extends StatelessWidget {
+  TextEditingController usernameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController reenterController = TextEditingController();
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

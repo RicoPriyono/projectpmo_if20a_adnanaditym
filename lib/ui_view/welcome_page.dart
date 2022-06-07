@@ -29,8 +29,8 @@ class _WelcomePageState extends State<WelcomePage> {
           children: [
             Text("Welcome to AXON MOTOR",
             style: TextStyle(
-              fontSize: 14,
-              color: Colors.black
+              fontSize: 18,
+              color: Colors.white
             ),
             ),
             SizedBox(
@@ -56,8 +56,8 @@ class _WelcomePageState extends State<WelcomePage> {
             ),
             Text('The best choice for your future',
                 style: TextStyle(
-                  fontSize: 12,
-                  color: Colors.black,
+                  fontSize: 18,
+                  color: Colors.white,
                 ),
                 textAlign: TextAlign.center),
           ],
