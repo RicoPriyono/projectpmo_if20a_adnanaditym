@@ -96,7 +96,7 @@ class _LoginDaftarState extends State<LoginDaftar> {
                         color: Colors.black
                     ),),
                   onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => login_daftar()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginDaftar()));
                   },
                 ),
               ),
