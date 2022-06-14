@@ -12,7 +12,7 @@ class _WelcomePageState extends State<WelcomePage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 4), (){
+    Timer(const Duration(seconds: 4), (){
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginDaftar()));
     });
   }
@@ -27,13 +27,13 @@ class _WelcomePageState extends State<WelcomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Welcome to AXON MOTOR",
+            const Text("Welcome to AXON MOTOR",
             style: TextStyle(
               fontSize: 18,
               color: Colors.white
             ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
@@ -43,18 +43,18 @@ class _WelcomePageState extends State<WelcomePage> {
                     Container(
                       height: 60,
                       width: 220,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage("assets/image/axon.png"))),
+                              image: AssetImage("assets/images/axon.png"))),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                   ],
                 ),
               ),
             ),
-            Text('The best choice for your future',
+            const Text('The best choice for your future',
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.white,

@@ -19,42 +19,42 @@ class _LoginDaftarState extends State<LoginDaftar> {
       backgroundColor: Colors.grey,
       body: Container(
 
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.only(top: 75),
+                margin: const EdgeInsets.only(top: 75),
                 height: 60,
                 width: 220,
-                decoration: BoxDecoration(
-                    image: DecorationImage(image: AssetImage("assets/image/logo.png"))
+                decoration: const BoxDecoration(
+                    image: DecorationImage(image: AssetImage("assets/images/logo.png"))
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                   "Selamat Datang di AXON MOTOR \n The best choice's for your future",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
 
                   ),
                   textAlign: TextAlign.center),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 20 ),
+                margin: const EdgeInsets.only(bottom: 20 ),
                 height: 80,
                 width: 134,
-                decoration : BoxDecoration(
-                    image: DecorationImage(image: AssetImage("assets/image/masuk.png"))
+                decoration : const BoxDecoration(
+                    image: DecorationImage(image: AssetImage("assets/images/masuk.png"))
                 ),
 
               ),
-              Text(
+              const Text(
                   "Silahkan pilih login, \n jika anda sudah memiliki akun",
                   style: TextStyle(
                     fontSize: 12,
@@ -62,14 +62,14 @@ class _LoginDaftarState extends State<LoginDaftar> {
                   ),
                   textAlign: TextAlign.center),
               Container(
-                margin: EdgeInsets.only(top: 10,bottom: 20),
+                margin: const EdgeInsets.only(top: 10,bottom: 20),
                 width: 256,
                 height: 38,
                 child: ElevatedButton(
                   style: ButtonStyle(
                       backgroundColor:MaterialStateProperty.all(Colors.white)
                   ),
-                  child: Text("LOGIN",
+                  child: const Text("LOGIN",
                     style: TextStyle(
                         color: Colors.black
                     ),),
@@ -78,7 +78,7 @@ class _LoginDaftarState extends State<LoginDaftar> {
                   },
                 ),
               ),
-              Text(
+              const Text(
                   "atau, \n silahkan daftar jika anda belum memiliki akun",
                   style: TextStyle(
                     fontSize: 12,
@@ -86,14 +86,14 @@ class _LoginDaftarState extends State<LoginDaftar> {
                   ),
                   textAlign: TextAlign.center),
               Container(
-                margin: EdgeInsets.only(top: 10,bottom: 50),
+                margin: const EdgeInsets.only(top: 10,bottom: 50),
                 width: 256,
                 height: 38,
                 child: ElevatedButton(
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white)
                   ),
-                  child: Text("DAFTAR",
+                  child: const Text("DAFTAR",
                     style: TextStyle(
                         color: Colors.black
                     ),),
@@ -109,22 +109,22 @@ class _LoginDaftarState extends State<LoginDaftar> {
                   Container(
                     width: 105,
                     height: 50,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(image: AssetImage("assets/image/ahm.png"))
+                    decoration: const BoxDecoration(
+                        image: DecorationImage(image: AssetImage("assets/images/ahm.png"))
                     ),
                   ),
                   Container(
                     width: 105,
                     height: 100,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(image: AssetImage("assets/image/astra.png"))
+                    decoration: const BoxDecoration(
+                        image: DecorationImage(image: AssetImage("assets/images/astra.png"))
                     ),
                   ),
                   Container(
                     width: 80,
                     height: 40,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(image: AssetImage("assets/image/honda.png"))
+                    decoration: const BoxDecoration(
+                        image: DecorationImage(image: AssetImage("assets/images/honda.png"))
                     ),
                   )
                 ],

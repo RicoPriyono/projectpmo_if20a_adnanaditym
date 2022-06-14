@@ -14,18 +14,18 @@ class Login extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Image.asset(
-                "assets/image/user.png",
+                "assets/images/user.png",
                 width: 130,
                 height: 150,
               ),
-              Text("Silahkan masukkan nama dan password anda !",
+              const Text("Silahkan masukkan nama dan password anda !",
                   style: TextStyle(color: Colors.white, fontSize: 12)),
               Container(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 width: 300,
                 // color: Colors.white,
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "Username",
                     hintStyle: TextStyle(color: Colors.white),
                     border: UnderlineInputBorder(),
@@ -38,16 +38,16 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 1.0,
               ),
               Container(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 width: 300,
                 // color: Colors.white,
                 child: TextFormField(
                   obscureText: true,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "Password",
                     hintStyle: TextStyle(color: Colors.white),
                     border: UnderlineInputBorder(),
@@ -60,13 +60,13 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               MaterialButton(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 minWidth: 340,
-                child: Text(
+                child: const Text(
                   "Log in",
                   style: TextStyle(
                       color: Colors.white70,
@@ -79,7 +79,7 @@ class Login extends StatelessWidget {
                 onPressed: () {},
               ),
               TextButton(
-                child: Text(
+                child: const Text(
                   "Not a member? Signup now",
                   style: TextStyle(color: Colors.white),
                 ),
