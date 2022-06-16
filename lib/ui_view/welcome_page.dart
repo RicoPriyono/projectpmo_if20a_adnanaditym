@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:projectpmo_if20a_adnanaditym/ui_view/login_daftar.dart';
+import 'package:projectpmo_if20a_adnanaditym/ui_view/signup.dart';
 
 class WelcomePage extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class _WelcomePageState extends State<WelcomePage> {
     // TODO: implement initState
     super.initState();
     Timer(Duration(seconds: 4), (){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginDaftar()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SignUp()));
     });
   }
 
@@ -45,7 +46,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       width: 220,
                       decoration: BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage("assets/image/axon.png"))),
+                              image: AssetImage("assets/images/logo.png"))),
                     ),
                     SizedBox(
                       height: 20,

@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:projectpmo_if20a_adnanaditym/ui_view/login.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 
 void main() => runApp(SignUp());
 
 
 class SignUp extends StatelessWidget {
-  TextEditingController usernameController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController reenterController = TextEditingController();
+  TextEditingController controllerusername = TextEditingController();
+  TextEditingController controlleremail = TextEditingController();
+  TextEditingController controllerpassword = TextEditingController();
+  TextEditingController controllerrepassword = TextEditingController();
 
   // This widget is the root of your application.
   @override
@@ -33,7 +34,7 @@ class SignUp extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Image.asset(
-                        "assets/image/regist.png",
+                        "assets/images/register.png",
                         width: 200,
                         height : 150,
                       ),
@@ -55,6 +56,7 @@ class SignUp extends StatelessWidget {
                               ),
                             ),
                           ),
+                          controller: controllerusername,
                         ),
                       ),
                       SizedBox(height: 10,),
@@ -74,6 +76,7 @@ class SignUp extends StatelessWidget {
                               ),
                             ),
                           ),
+                          controller: controlleremail,
                         ),
                       ),
                       SizedBox(height: 10,),
@@ -94,6 +97,7 @@ class SignUp extends StatelessWidget {
                               ),
                             ),
                           ),
+                          controller: controllerpassword,
                         ),
                       ),
                       SizedBox(height: 10,),
@@ -114,6 +118,7 @@ class SignUp extends StatelessWidget {
                               ),
                             ),
                           ),
+                          controller: controllerrepassword,
                         ),
                       ),
                     ],
@@ -129,7 +134,47 @@ class SignUp extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ) ,
-                onPressed: () async {},
+                onPressed: ()  {
+                  if (controllerusername.text.trim()=="") {
+                    Fluttertoast.showToast(
+                        msg: "The username field is required",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.BOTTOM,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white,
+                        fontSize: 20.0);
+                  } else if (controlleremail.text.trim()==""){
+                    Fluttertoast.showToast(
+                        msg: "The email field is required",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.BOTTOM,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white,
+                        fontSize: 20.0);
+                  } else if (controllerpassword.text.trim()==""){
+                    Fluttertoast.showToast(
+                        msg: "The password field is required",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.BOTTOM,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white,
+                        fontSize: 20.0);
+                  } else if (controllerrepassword.text.trim()==""){
+                    Fluttertoast.showToast(
+                        msg: "The re-password field is required",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.BOTTOM,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white,
+                        fontSize: 20.0);
+                  } else {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
+                  }
+                },
               ),
               TextButton(
                 child: Text("Already registered? Login me", style: TextStyle(color: Colors.black)),

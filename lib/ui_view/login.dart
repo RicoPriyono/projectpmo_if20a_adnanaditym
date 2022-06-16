@@ -1,10 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '/ui_view/signup.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 void main() => runApp(Login());
 
 class Login extends StatelessWidget {
+  TextEditingController controllerusername = TextEditingController();
+  TextEditingController controllerpassword = TextEditingController();
+
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.brown,
@@ -13,10 +18,19 @@ class Login extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              Text("Login",
+                  style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white)),
+              SizedBox(height: 20),
               Image.asset(
-                "assets/image/user.png",
+                "assets/images/male.png",
                 width: 130,
                 height: 150,
+              ),
+              SizedBox(
+                height: 20
               ),
               Text("Silahkan masukkan nama dan password anda !",
                   style: TextStyle(color: Colors.white, fontSize: 12)),
@@ -36,6 +50,7 @@ class Login extends StatelessWidget {
                       ),
                     ),
                   ),
+                  controller: controllerusername,
                 ),
               ),
               SizedBox(
@@ -58,6 +73,7 @@ class Login extends StatelessWidget {
                       ),
                     ),
                   ),
+                  controller: controllerpassword,
                 ),
               ),
               SizedBox(
@@ -76,7 +92,27 @@ class Login extends StatelessWidget {
                 color: Colors.white12,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)),
-                onPressed: () {},
+                onPressed: () {
+                  if (controllerusername.text.trim()==""){
+                    Fluttertoast.showToast(
+                        msg: "The username field is required",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.BOTTOM,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white,
+                        fontSize: 20.0);
+                  } else if (controllerpassword.text.trim()==""){
+                    Fluttertoast.showToast(
+                        msg: "The password field is required",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.BOTTOM,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white,
+                        fontSize: 20.0);
+                  }
+                },
               ),
               TextButton(
                 child: Text(
