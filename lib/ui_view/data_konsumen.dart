@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:projectpmo_if20a_adnanaditym/ui_view/login.dart';
 
 
-void main() => runApp(SignUp());
+void main() => runApp(Data_Konsumen());
 
 
-class SignUp extends StatelessWidget {
-  TextEditingController usernameController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController reenterController = TextEditingController();
+class Data_Konsumen extends StatelessWidget {
+  TextEditingController namaController = TextEditingController();
+  TextEditingController alamatController = TextEditingController();
+  TextEditingController notelpController = TextEditingController();
+  TextEditingController namabarangController = TextEditingController();
+  TextEditingController idbarangController = TextEditingController();
+  TextEditingController jumlahpesananController = TextEditingController();
 
   // This widget is the root of your application.
   @override
@@ -20,31 +21,28 @@ class SignUp extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                margin: const EdgeInsets.only(top: 50),
-                height: 500,
-                width: 340,
+                margin: const EdgeInsets.only(top: 70),
+                height: 600,
+                width: 500,
                 decoration: BoxDecoration(
-                  color: Colors.grey,
+                  color: Colors.brown,
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Image.asset(
-                        "assets/images/regist.png",
-                        width: 200,
-                        height : 150,
-                      ),
-                      const Text("Masukkan data diri anda !",
-                          style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold)),
+                      const Text("DATA KONSUMEN",
+                          style: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold)),
+                      const Text("Periksa Kembali Pesanan Anda!",
+                          style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
                       Container(
-                        padding: EdgeInsets.all(10),
-                        width: 300,
+                        padding: const EdgeInsets.all(10),
+                        width: 400,
                         // color: Colors.black87,
                         child: TextFormField(
                           decoration: const InputDecoration(
-                            hintText: "Username",
+                            hintText: "Nama",
                             hintStyle: TextStyle(color: Colors.white),
                             border: UnderlineInputBorder(),
                             enabledBorder: UnderlineInputBorder(
@@ -59,11 +57,30 @@ class SignUp extends StatelessWidget {
                       const SizedBox(height: 10,),
                       Container(
                         padding: const EdgeInsets.all(10),
-                        width: 300,
+                        width: 400,
                         // color: Colors.black87,
                         child: TextFormField(
                           decoration: const InputDecoration(
-                            hintText: "Email",
+                            hintText: "Alamat",
+                            hintStyle: TextStyle(color: Colors.white),
+                            border: UnderlineInputBorder(),
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.white54,
+                                width: 2.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 10,),
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        width: 400,
+                        // color: Colors.black87,
+                        child: TextFormField(
+                          decoration: const InputDecoration(
+                            hintText: "No Telp",
                             hintStyle: TextStyle(color: Colors.white),
                             border: UnderlineInputBorder(),
                             enabledBorder: UnderlineInputBorder(
@@ -78,12 +95,11 @@ class SignUp extends StatelessWidget {
                       const SizedBox(height: 10,),
                       Container(
                         padding: const EdgeInsets.all(10),
-                        width: 300,
+                        width: 400,
                         // color: Colors.black87,
                         child: TextFormField(
-                          obscureText: true,
                           decoration: const InputDecoration(
-                            hintText: "Password",
+                            hintText: "Nama Barang",
                             hintStyle: TextStyle(color: Colors.white),
                             border: UnderlineInputBorder(),
                             enabledBorder: UnderlineInputBorder(
@@ -98,12 +114,30 @@ class SignUp extends StatelessWidget {
                       const SizedBox(height: 10,),
                       Container(
                         padding: const EdgeInsets.all(10),
-                        width: 300,
+                        width: 400,
                         // color: Colors.black87,
                         child: TextFormField(
-                          obscureText: true,
                           decoration: const InputDecoration(
-                            hintText: "Reenter Password",
+                            hintText: "ID Barang",
+                            hintStyle: TextStyle(color: Colors.white),
+                            border: UnderlineInputBorder(),
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.white54,
+                                width: 3.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 10,),
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        width: 400,
+                        // color: Colors.black87,
+                        child: TextFormField(
+                          decoration: const InputDecoration(
+                            hintText: "Jumlah Pesanan",
                             hintStyle: TextStyle(color: Colors.white),
                             border: UnderlineInputBorder(),
                             enabledBorder: UnderlineInputBorder(
@@ -122,19 +156,13 @@ class SignUp extends StatelessWidget {
               const SizedBox(height: 20,),
               MaterialButton(
                 padding: const EdgeInsets.all(20),
-                minWidth: 340,
-                child: const Text("REGISTER", style: TextStyle(color: Colors.black87, fontSize: 15, fontWeight: FontWeight.bold),),
-                color: Colors.greenAccent,
+                minWidth: 500,
+                child: Text("Confirm", style: TextStyle(color: Colors.black87, fontSize: 30, fontWeight: FontWeight.bold),),
+                color: Colors.green,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ) ,
                 onPressed: () async {},
-              ),
-              TextButton(
-                child: const Text("Already registered? Login me", style: TextStyle(color: Colors.black)),
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
-                },
               ),
             ],
           ),
