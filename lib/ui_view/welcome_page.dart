@@ -45,7 +45,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       width: 220,
                       decoration: const BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage("assets/images/axon.png"))),
+                              image: AssetImage("assets/images/logo.png"))),
                     ),
                     const SizedBox(
                       height: 20,

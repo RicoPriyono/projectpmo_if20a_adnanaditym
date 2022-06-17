@@ -50,7 +50,7 @@ class _LoginDaftarState extends State<LoginDaftar> {
                 height: 80,
                 width: 134,
                 decoration : const BoxDecoration(
-                    image: DecorationImage(image: AssetImage("assets/images/masuk.png"))
+                    image: DecorationImage(image: AssetImage("assets/images/undraw.png"))
                 ),
 
               ),

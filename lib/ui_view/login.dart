@@ -1,10 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:projectpmo_if20a_adnanaditym/ui_view/dashbord_admin.dart';
 import '/ui_view/signup.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 void main() => runApp(Login());
 
 class Login extends StatelessWidget {
+  TextEditingController controllerusername = TextEditingController();
+  TextEditingController controllerpassword = TextEditingController();
+
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.brown,
@@ -14,7 +20,7 @@ class Login extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Image.asset(
-                "assets/image/user.png",
+                "assets/images/male.png",
                 width: 130,
                 height: 150,
               ),
@@ -36,6 +42,7 @@ class Login extends StatelessWidget {
                       ),
                     ),
                   ),
+                  controller: controllerusername,
                 ),
               ),
               SizedBox(
@@ -58,6 +65,7 @@ class Login extends StatelessWidget {
                       ),
                     ),
                   ),
+                  controller: controllerpassword,
                 ),
               ),
               SizedBox(
@@ -76,7 +84,30 @@ class Login extends StatelessWidget {
                 color: Colors.white12,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)),
-                onPressed: () {},
+                onPressed: () {
+                  if (controllerusername.text.trim()==""){
+                    Fluttertoast.showToast(
+                        msg: "The username field is required",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.BOTTOM,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white,
+                        fontSize: 20.0);
+                  } else if (controllerpassword.text.trim()==""){
+                    Fluttertoast.showToast(
+                        msg: "The password field is required",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.BOTTOM,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white,
+                        fontSize: 20.0);
+                  } else {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => DashbordAdmin()));
+                  }
+                },
               ),
               TextButton(
                 child: Text(

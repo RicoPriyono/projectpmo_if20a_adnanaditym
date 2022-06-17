@@ -23,8 +23,7 @@ class _DashbordAdminState extends State<DashbordAdmin> {
               width: 120,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage("assets/images/logo.png"))
-              ),
+                      image: AssetImage("assets/images/logo.png"))),
             ),
             Container(
               margin: EdgeInsets.only(top: 20, left: 250),
@@ -32,51 +31,54 @@ class _DashbordAdminState extends State<DashbordAdmin> {
               width: 120,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage("assets/images/undraw_male_avatar.png"))
-              ),
+                      image:
+                          AssetImage("assets/images/undraw_male_avatar.png"))),
             ),
-
             SizedBox(
               height: 80,
             ),
-
-
             Center(
               child: Column(
                 children: [
+                  SizedBox(height: 10),
                   Container(
-                    margin: EdgeInsets.only(top: 20, bottom: 20),
+                    margin: EdgeInsets.only(top: 30, bottom: 20),
                     width: 256,
                     height: 70,
                     child: ElevatedButton(
                       style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(Colors.white)
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.white)),
+                      child: Text(
+                        "INPUT DATA",
+                        style: TextStyle(color: Colors.black),
                       ),
-                      child: Text("INPUT DATA",
-                        style: TextStyle(
-                            color: Colors.black
-                        ),),
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Data_Konsumen()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Data_Konsumen()));
                       },
                     ),
                   ),
+                  SizedBox(height: 50),
                   Container(
                     margin: EdgeInsets.only(top: 20, bottom: 60),
                     width: 256,
                     height: 70,
                     child: ElevatedButton(
                       style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(Colors.white)
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.white)),
+                      child: Text(
+                        "LAPORAN PENJUALAN",
+                        style: TextStyle(color: Colors.black),
                       ),
-                      child: Text("LAPORAN PENJUALAN",
-                        style: TextStyle(
-                            color: Colors.black
-                        ),),
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => Data_Konsumen()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Data_Konsumen()));
                       },
                     ),
                   ),
@@ -89,5 +91,3 @@ class _DashbordAdminState extends State<DashbordAdmin> {
     );
   }
 }
-
-
