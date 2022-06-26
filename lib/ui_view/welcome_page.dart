@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:projectpmo_if20a_adnanaditym/ui_view/login_daftar.dart';
+import 'package:projectpmo_if20a_adnanaditym/ui_view/pilihanjual.dart';
 
 class WelcomePage extends StatefulWidget {
   @override
